@@ -27,12 +27,12 @@ export default function Home() {
         <div className={styles.infoContent}>
           <section className={styles.box}>
             <span>
-              + 12 posts
+              +12 posts
             </span>
           </section>
           <section className={styles.box}>
             <span>
-              90 comentários
+              +90 comentários
             </span>
           </section>
         </div>
