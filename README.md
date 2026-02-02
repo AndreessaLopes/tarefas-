@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✅ Tarefas+
 
-## Getting Started
+O **Tarefas+** é uma aplicação web desenvolvida com **Next.js**, utilizando **Firebase** como backend (CRUD completo) e **NextAuth** para autenticação via **Google**.  
+O sistema permite criar, visualizar e gerenciar tarefas (ou posts), além de adicionar comentários vinculados a cada tarefa, com acesso por listagem geral ou por ID.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Funcionalidades
+
+- 🔐 Autenticação com Google (NextAuth)
+- 📝 CRUD completo de tarefas/posts
+- 💬 Comentários associados às tarefas
+- 🔍 Acesso às tarefas por ID
+- 📄 Listagem geral de tarefas
+- 📊 Dashboard para visualização das informações
+- 🔥 Integração com Firebase (Firestore)
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Framework:** Next.js (React + TypeScript)
+- **Autenticação:** NextAuth.js (Google Provider)
+- **Backend / Database:** Firebase (Firestore)
+- **Estilização:** CSS Modules + CSS Global
+- **Linguagem:** TypeScript
+- **Versionamento:** Git & GitHub
+
+---
+
+## 📂 Estrutura do Projeto
+
+```text
+src/
+├── components/
+│   ├── header/
+│   │   ├── index.tsx
+│   │   └── styles.module.css
+│   └── textarea/
+│       ├── index.tsx
+│       └── styles.module.css
+│
+├── pages/
+│   ├── api/
+│   │   └── auth/
+│   │       └── [...nextauth].ts
+│   ├── dashboard/
+│   │   ├── index.tsx
+│   │   └── styles.module.css
+│   ├── task/
+│   │   ├── [id].tsx
+│   │   └── styles.module.css
+│   ├── _app.tsx
+│   └── index.tsx
+│
+├── services/
+│   └── firebaseConnection.ts
+│
+└── styles/
+    ├── globals.css
+    └── home.module.css
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Autenticação
+A autenticação é feita utilizando NextAuth.js com provedor Google, garantindo login seguro e rápido.
+Arquivo responsável:
+```bash
+pages/api/auth/[...nextauth].ts
+```
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔥 Firebase
+O Firebase é utilizado para:
+- Armazenar tarefas/posts
+- Armazenar comentários vinculados às tarefas
+- Realizar operações de Create, Read, Update e Delete (CRUD)
 
-## Learn More
+Configuração centralizada em:
+```bash
+services/firebaseConnection.ts
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔄 Fluxo da Aplicação
+1.Usuário realiza login com Google
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2.Acesso ao dashboard
 
-## Deploy on Vercel
+3.Criação de tarefas/posts
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4.Cada tarefa recebe um ID único
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5.Comentários podem ser adicionados à tarefa
+
+6.A tarefa pode ser acessada:
+
+  - Pela listagem geral
+
+  - Diretamente pelo ID (/task/[id])
+
+---
+
+## ▶️ Como Executar o Projeto
+📦 Instalar dependências
+```bash
+npm install
+# ou
+yarn install
+```
+▶️ Rodar o projeto
+```bash
+npm run dev
+# ou
+yarn dev
+```
+A aplicação estará disponível em:
+```bash
+http://localhost:3000
+```
+
+---
+
+## 🔑 Variáveis de Ambiente
+Crie um arquivo .env.local com as seguintes variáveis:
+```text
+GOOGLE_CLIENT_ID=seu_client_id
+GOOGLE_CLIENT_SECRET=seu_client_secret
+NEXTAUTH_SECRET=sua_chave_secreta
+
+NEXT_PUBLIC_FIREBASE_API_KEY=xxxx
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=xxxx
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=xxxx
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=xxxx
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=xxxx
+NEXT_PUBLIC_FIREBASE_APP_ID=xxxx
+```
+
+---
+
