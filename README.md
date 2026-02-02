@@ -66,7 +66,7 @@ src/
 ## 🔐 Autenticação
 A autenticação é feita utilizando NextAuth.js com provedor Google, garantindo login seguro e rápido.
 Arquivo responsável:
-```bash
+```text
 pages/api/auth/[...nextauth].ts
 ```
 ---
@@ -85,21 +85,15 @@ services/firebaseConnection.ts
 ---
 
 ## 🔄 Fluxo da Aplicação
-1.Usuário realiza login com Google
 
-2.Acesso ao dashboard
-
-3.Criação de tarefas/posts
-
-4.Cada tarefa recebe um ID único
-
-5.Comentários podem ser adicionados à tarefa
-
-6.A tarefa pode ser acessada:
-
-  - Pela listagem geral
-
-  - Diretamente pelo ID (/task/[id])
+1. Usuário realiza login com Google  
+2. Acesso ao dashboard  
+3. Criação de tarefas/posts  
+4. Cada tarefa recebe um ID único  
+5. Comentários podem ser adicionados à tarefa  
+6. A tarefa pode ser acessada:
+   - Pela listagem geral
+   - Diretamente pelo ID (`/task/[id]`)
 
 ---
 
@@ -140,3 +134,7 @@ NEXT_PUBLIC_FIREBASE_APP_ID=xxxx
 
 ---
 
+## 👩‍💻 Desenvolvido por
+
+**Andressa Lopes**  
+🔗 GitHub: https://github.com/AndreessaLopes
