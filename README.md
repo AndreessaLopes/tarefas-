@@ -78,7 +78,7 @@ O Firebase é utilizado para:
 - Realizar operações de Create, Read, Update e Delete (CRUD)
 
 Configuração centralizada em:
-```bash
+```text
 services/firebaseConnection.ts
 ```
 
@@ -111,7 +111,7 @@ npm run dev
 yarn dev
 ```
 A aplicação estará disponível em:
-```bash
+```text
 http://localhost:3000
 ```
 
@@ -131,6 +131,19 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=xxxx
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=xxxx
 NEXT_PUBLIC_FIREBASE_APP_ID=xxxx
 ```
+
+---
+
+## 🖼️ Preview
+
+**Home**
+![Home](./public/preview/home.png)
+
+**Dashboard**
+![Dashboard](./public/preview/dashboard.png)
+
+**Página da Tarefa**
+![Task](./public/preview/task.png)
 
 ---
 
