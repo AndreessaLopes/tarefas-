@@ -147,6 +147,13 @@ NEXT_PUBLIC_FIREBASE_APP_ID=xxxx
 
 ---
 
+## 🌐 Demo
+
+A aplicação está disponível em produção:
+👉 https://tarefas-phi-blue.vercel.app/
+
+---
+
 ## 👩‍💻 Desenvolvido por
 
 **Andressa Lopes**  
